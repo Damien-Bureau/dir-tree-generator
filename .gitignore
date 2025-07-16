@@ -1,0 +1,8 @@
+# Virtual environments
+.venv/
+.venv-publish/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/

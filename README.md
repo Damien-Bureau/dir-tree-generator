@@ -1,4 +1,4 @@
-# dir-tree-generator
+# 🌳 tree-it
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
@@ -11,7 +11,7 @@ A simple and flexible CLI tool to generate a visual representation of your proje
 
 ---
 
-## Features
+## 🔧 Features
 
 - Output a tree view of any directory  
 - Control the depth of the tree with a `--depth` option (`0`, `1`, ..., or `full`)  
@@ -22,21 +22,27 @@ A simple and flexible CLI tool to generate a visual representation of your proje
 
 ---
 
-## Installation
+## 📦 Installation
 
-Clone the repository:
+Install from [PyPI](https://pypi.org/project/tree-it):
 
 ```bash
-git clone https://github.com/your-username/dir-tree-generator.git
-cd dir-tree-generator
+pip install tree-it
+```
+
+Or clone the repository:
+
+```bash
+git clone https://github.com/Damien-Bureau/tree-it.git
+cd tree-it
 ```
 
 ---
 
-## Usage
+## 🚀 Usage
 
 ```bash
-python generate_tree.py [path] [options]
+treeit [path] [options]
 ```
 
 ### Options
@@ -50,7 +56,7 @@ python generate_tree.py [path] [options]
 
 ---
 
-## Ignore Patterns
+## 🎯 Ignore Patterns
 
 | Pattern         | Meaning                                     |
 |-----------------|---------------------------------------------|
@@ -61,19 +67,19 @@ python generate_tree.py [path] [options]
 
 ---
 
-### Examples
+### ✅ Examples
 
 ```bash
 # Show tree up to depth 2, ignoring node_modules entirely
-python generate_tree.py -d 2 --ignore node_modules/
+treeit -d 2 --ignore node_modules/
 
 # Ignore all .log files and only the content of frontend/node_modules
-python generate_tree.py --ignore *.log frontend/node_modules/*
+treeit --ignore *.log frontend/node_modules/*
 ```
 
 ---
 
-## Output example
+## 📄 Output example
 
 ```
 my-project/
@@ -88,13 +94,7 @@ my-project/
 
 ---
 
-## License
+## 🔒 License
 
 MIT — free to use, modify and share.  
 Feel free to contribute or suggest improvements!
-
----
-
-## Author
-
-Made by [Damien Bureau](https://github.com/your-username)
