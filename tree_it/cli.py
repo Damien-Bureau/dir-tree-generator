@@ -11,7 +11,7 @@ def write_structure_to_txt(root_path: str, output_file: str, max_depth: int | st
     root = Path(root_path).resolve()
     lines = []
 
-    # Classer les patterns
+    # Classify patterns
     ignored_files = set()
     ignored_dirs = set()
     ignored_dir_content = set()
@@ -21,15 +21,15 @@ def write_structure_to_txt(root_path: str, output_file: str, max_depth: int | st
         p = Path(pattern)
         if "*" in pattern:
             if p.name == "*":
-                # dossier/* => ignorer contenu mais pas le dossier
+                # folder/* => ignore content but not the folder
                 ignored_dir_content.add(str(p.parent))
             else:
                 ignored_globs.append(pattern)
         elif pattern.endswith("/"):
-            # folder/ => ignorer dossier complètement
+            # folder/ => ignore folder completely
             ignored_dirs.add(pattern.rstrip("/"))
         else:
-            # fichier exact
+            # exact file
             ignored_files.add(pattern)
 
     def should_ignore_file(p: Path) -> bool:
@@ -65,7 +65,7 @@ def write_structure_to_txt(root_path: str, output_file: str, max_depth: int | st
             connector = "└── " if i == len(sorted_entries) - 1 else "├── "
             rel = entry.relative_to(root)
 
-            # Vérif ignore
+            # Check ignore
             if entry.is_file() and should_ignore_file(entry):
                 continue
             if entry.is_dir():
@@ -84,10 +84,10 @@ def write_structure_to_txt(root_path: str, output_file: str, max_depth: int | st
     lines.append(f"{root.name}/")
     recurse(root, depth=1)
     Path(output_file).write_text("\n".join(lines), encoding="utf-8")
-    print(f"Structure saved to {output_file}")
+    print(f"Tree saved to {output_file}")
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Export directory structure to a text file.")
+    parser = argparse.ArgumentParser(description="Export directory tree to a text file.")
     parser.add_argument("path", nargs="?", default=".", help="Root path of the project (default: current directory)")
     parser.add_argument("-o", "--output", default="tree.txt", help="Output file name")
     parser.add_argument("-d", "--depth", default="full", help="Max depth (0, 1, 2, ..., or 'full')")
@@ -103,6 +103,9 @@ def parse_args():
 
     return args
 
-if __name__ == "__main__":
+def main():
     args = parse_args()
     write_structure_to_txt(args.path, args.output, args.depth, args.ignore)
+
+if __name__ == "__main__":
+    main()
