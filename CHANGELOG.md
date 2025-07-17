@@ -6,19 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-## [Unreleased]
-
-### Fixed
-- Add trailing slash to folders in output tree
-
----
-
 ## [1.0.1] – 2025-07-17
 
 ### Changed
 - Changed PyPI name from `tree-it` to `treeit-cli`
 - Updated README instructions and PyPI badge
 - Added `rebuild.bat` and `publish.bat` helper scripts
+- Add trailing slash to folders in output tree
 
 ---
 
