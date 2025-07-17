@@ -56,7 +56,7 @@ treeit [path] [options]
 | `path`                    | Root directory to scan (default: current folder)             |
 | `-o`, `--output`          | Output file (default: `tree.txt`)                            |
 | `-d`, `--depth`           | Max depth (`0`, `1`, ..., or `full`)                         |
-| `--ignore [patterns...]`  | Ignore rules (see examples below)                            |
+| `-i`, `--ignore [patterns...]`  | Ignore rules (see examples below)                            |
 
 ---
 
