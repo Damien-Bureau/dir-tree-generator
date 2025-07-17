@@ -2,9 +2,9 @@
 echo.
 echo ===== UPLOADING TO PYPI =====
 
-@REM .venv-publish\Scripts\activate.bat
-twine upload dist\*
+call .venv-publish\Scripts\activate.bat
+twine upload dist\* --verbose
 
 echo.
 echo ===== DONE =====
-pause
+echo.

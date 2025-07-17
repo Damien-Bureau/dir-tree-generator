@@ -9,9 +9,9 @@ for /d %%D in (*.egg-info) do rmdir /s /q "%%D"
 echo.
 echo ===== REBUILDING PACKAGE =====
 
-@REM .venv-publish\Scripts\activate.bat
+call .venv-publish\Scripts\activate.bat
 python -m build
 
 echo.
 echo ===== DONE =====
-pause
+echo.
