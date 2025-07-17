@@ -1,5 +1,6 @@
 # 🌳 tree-it
 
+![PyPI](https://img.shields.io/pypi/v/treeit-cli)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)
@@ -24,11 +25,14 @@ A simple and flexible CLI tool to generate a visual representation of your proje
 
 ## 📦 Installation
 
-Install from [PyPI](https://pypi.org/project/tree-it):
+Install from [PyPI](https://pypi.org/project/treeit-cli):
 
 ```bash
-pip install tree-it
+pip install treeit-cli
 ```
+
+> ⚠️ Note: This project is currently published under the name `treeit-cli` on PyPI  
+> If the name `tree-it` becomes available in the future, the package name may change accordingly.
 
 Or clone the repository:
 
