@@ -76,7 +76,7 @@ def write_structure_to_txt(root_path: str, output_file: str, max_depth: int | st
                     lines.append(f"{prefix}{connector}{entry.name}/  (content ignored)")
                     continue
 
-            lines.append(f"{prefix}{connector}{entry.name}")
+            lines.append(f"{prefix}{connector}{entry.name}/" if entry.is_dir() else f"{prefix}{connector}{entry.name}")
             if entry.is_dir():
                 extension = "    " if i == len(sorted_entries) - 1 else "│   "
                 recurse(entry, prefix + extension, depth + 1)
