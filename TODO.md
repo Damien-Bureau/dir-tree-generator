@@ -1,4 +1,4 @@
-# TODO – Features & Improvements for tree-it
+# 📋 TODO – Features & Improvements for tree-it
 
 This file tracks planned enhancements and ideas for future releases.
 
